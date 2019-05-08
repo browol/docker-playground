@@ -20,7 +20,7 @@ To install vendor for laravel and reduce image size
 ```Shell
 docker run --rm -it web/:app composer:1.8
 ```
-note: �--rm� command: when container has been stop, container will be delete itself after process stop.
+note: `--rm` command: container will be delete itself after process stop (ctrl+c)
 
 .
 
