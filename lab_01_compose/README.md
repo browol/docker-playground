@@ -1,6 +1,6 @@
 ##Build Laravel web using Docker Compose
 
-<br/>
+ \
 
 ###Install dependencies for Web
 
@@ -23,7 +23,7 @@ laravel new web && cd web/
 ```Shell
 docker run --rm -it web/:app composer:1.8
 ```
-note: â€œ--rmâ€ command: when container has been stop, container will be delete itself after process stop.
+note: “--rm” command: when container has been stop, container will be delete itself after process stop.
 
 <br/>
 
