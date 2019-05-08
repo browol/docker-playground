@@ -1,6 +1,6 @@
 ##Build Laravel web using Docker Compose
 
- \
+<br />
 
 ###Install dependencies for Web
 
