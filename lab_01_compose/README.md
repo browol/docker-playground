@@ -1,6 +1,11 @@
-#Build Laravel web using Docker Compose
+##Build Laravel web using Docker Compose
 
-cd to lab_01_compose/ and run following command
-``docker-compose up -d``
+go to lab_01_compose/  
 
-Yay Happy developing!
+`cd lab_01_compose/`
+
+run following command to run container from ***docker-compose.yml***  
+
+`docker-compose up -d`
+
+**Yay Happy developing!**
