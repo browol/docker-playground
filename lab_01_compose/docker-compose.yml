@@ -1,0 +1,19 @@
+version: '3.2'
+services:
+
+  php:
+    image: php:fpm-alpine
+    container_name: php_www
+    volumes:
+      - ./web/:/var/www/html
+    ports:
+      - '9000'
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx_host
+    volumes:
+      - ./config/nginx/:/etc/nginx/conf.d/
+      - ./web/:/var/www/html
+    ports:
+      - 80:80
