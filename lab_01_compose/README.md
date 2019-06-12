@@ -1,20 +1,18 @@
-##Build Laravel web using Docker Compose
+## Build Laravel web using Docker Compose
 
 
-###Install dependencies for Web
+### Install dependencies for Web
 
 
 First, download the Laravel installer using Composer
 ```Shell
 composer global require laravel/installer
 ```
-.
 
 Then, create laravel project into directory web/
 ```Shell
 laravel new web && cd web/
 ```
-.
 
 To install vendor for laravel and reduce image size
 ```Shell
@@ -22,9 +20,7 @@ docker run --rm -it web/:app composer:1.8
 ```
 note: `--rm` command: container will be delete itself after process stop (ctrl+c)
 
-.
-
-###Create docker-compose file
+### Create docker-compose file
 
 docker-compose.yml
 ```YAML
@@ -48,25 +44,20 @@ services:
     ports:
       - 80:80
 ```
-.
 
-###Run docker-compose file
+### Run docker-compose file
  
 go to directory lab_01_compose/  
 ```Shell
 cd lab_01_compose/
 ```
-.
 
 run following command to run container from *docker-compose.yml*  
 
 ```Shell
 docker-compose up -d
 ```
-.
 
 Finally go to [localhost:80](localhost:80)
-
-.
 
 **Yay Happy developing!**
