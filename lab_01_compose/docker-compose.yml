@@ -1,19 +1,31 @@
 version: '3.2'
 services:
 
+  db:
+    image: mariadb
+    environment:
+      MYSQL_DATABASE: eipp
+      MYSQL_ROOT_PASSWORD: 1qazZAQ!
+    ports:
+      - 3306
+
   php:
-    image: php:fpm-alpine
-    container_name: php_www
+    build: ./phpfpm
     volumes:
       - ./web/:/var/www/html
     ports:
-      - '9000'
+      - 9000
+    environment:
+      DB_HOST: db
+      DB_DATABASE: eipp
+      DB_USERNAME: root
+      DB_PASSWORD: 1qazZAQ!
+      DB_PORT: 3306
 
   nginx:
     image: nginx:alpine
-    container_name: nginx_host
     volumes:
-      - ./config/nginx/:/etc/nginx/conf.d/
+      - ./nginx/:/etc/nginx/conf.d/
       - ./web/:/var/www/html
     ports:
       - 80:80
